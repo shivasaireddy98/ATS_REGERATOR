@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import datetime
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from typing import Any, Dict, List, Optional, Tuple
 
 def main():
     st.set_page_config(
@@ -81,7 +82,7 @@ def main():
             st.header("Analysis Results")
             st.info("Upload a resume and click 'Analyze Resume' to see results here.")
 
-def display_results(results: Dict):
+def display_results(results: Dict[str, Any]) -> None:
     """Display analysis results"""
     st.header("📊 Analysis Results")
     
